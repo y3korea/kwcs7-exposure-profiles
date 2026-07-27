@@ -1,0 +1,5 @@
+phenotype,n,pres %,pres_lo,pres_hi,pres wtd%,absent %,absent_lo,absent_hi,absent wtd%,poorwlb %,poorwlb_lo,poorwlb_hi,poorwlb wtd%,engage
+Low-exposure,19924,4.0,3.71,4.31,3.72,3.65,3.39,3.92,3.47,18.51,17.98,19.06,17.43,3.557
+Interpersonal,10214,8.13,7.57,8.74,6.98,4.19,3.82,4.6,4.13,30.95,30.06,31.86,27.87,3.521
+Physical-env.,12034,9.78,9.21,10.38,9.1,6.06,5.64,6.51,6.49,26.01,25.23,26.8,24.74,3.47
+High-intensity,1953,7.19,6.03,8.54,7.71,3.37,2.65,4.28,3.58,31.66,29.63,33.76,30.2,3.358

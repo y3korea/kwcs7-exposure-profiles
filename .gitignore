@@ -1,0 +1,24 @@
+# ---------------------------------------------------------------------------
+# RAW SURVEY MICRODATA MUST NEVER BE COMMITTED.
+# The 7th Korean Working Conditions Survey is released by KOSHA to individual
+# researchers on application. Redistributing the microdata would breach the
+# terms under which it was obtained. Only aggregate, derived results and the
+# analysis code belong in this repository.
+# ---------------------------------------------------------------------------
+input/
+data/
+*.csv.gz
+*근로환경조사*
+*.sav
+*.dta
+*.parquet
+
+# Large binary intermediates
+*.npz
+
+# Local noise
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
+.venv/

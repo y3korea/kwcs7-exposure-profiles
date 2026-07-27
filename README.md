@@ -1,0 +1,122 @@
+# Co-occurring occupational hazard exposure profiles — 7th Korean Working Conditions Survey
+
+Analysis code and derived results for the study:
+
+> **Co-occurring Occupational Hazard Exposure Profiles and Their Associations With Presenteeism, Sickness Absence, and Work–Life Balance: An Unsupervised Clustering Analysis of the 7th Korean Working Conditions Survey**
+
+*Manuscript under review. Citation details will be added on acceptance.*
+
+---
+
+## What this study does
+
+Occupational-health surveillance usually studies one hazard at a time, but workers meet
+hazards in bundles. Using the 7th Korean Working Conditions Survey (2023, N = 44,125
+working-age employees), we z-standardized **18 self-reported hazard-exposure items** across
+physical, ergonomic, and psychosocial domains and partitioned workers with **k-means
+clustering**. Four outcomes were deliberately **withheld** from clustering and only then
+compared across the resulting profiles.
+
+**Four profiles emerged** (bootstrap adjusted Rand index = 0.92 over 500 replicates):
+
+| Profile | n | Weighted % | Physical (z) | Ergonomic (z) | Psychosocial (z) |
+|---|---:|---:|---:|---:|---:|
+| Low-exposure/office-sedentary | 19,924 | 46.0 | −0.45 | −0.35 | −0.39 |
+| Interpersonal/service | 10,214 | 20.5 | −0.35 | +0.32 | **+0.71** |
+| Physical-environmental | 12,034 | 28.2 | **+0.62** | +0.16 | −0.08 |
+| High-intensity multi-hazard | 1,953 | 5.2 | **+2.58** | +0.86 | +0.79 |
+
+The key structural result is that the workforce varies along **two** axes, not one: overall
+exposure *intensity* (PC1, 36.5% of variance) **and** a physical-versus-interpersonal
+*composition* axis (PC2, 12.6%). The Interpersonal/service profile reports low physical
+exposure and would be scored "low-risk" by any intensity-based screen, yet carries one of the
+highest presenteeism burdens — which is the finding with the most direct prevention relevance.
+
+---
+
+## Reproducing the analysis
+
+### 1. Obtain the data (not included here)
+
+The raw microdata is **not** in this repository and must not be redistributed. The 7th Korean
+Working Conditions Survey is de-identified public-use microdata released by the **Korea
+Occupational Safety and Health Agency (KOSHA)** to researchers on application through the
+KWCS data portal. Apply to KOSHA directly.
+
+Place the survey CSV where the notebook's first cell expects it and set `BASE` accordingly.
+Absolute paths in the committed notebook have been replaced with `<PROJECT_ROOT>`.
+
+### 2. Environment
+
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Python 3.10. Random seeds are fixed and linear-algebra threading is pinned, so a full run is
+deterministic and regenerates every figure, table, and reported statistic from the raw survey
+file in one pass.
+
+### 3. Run
+
+Open `KWCS7_exposure_profiles.ipynb` and run all cells.
+
+---
+
+## Repository layout
+
+```
+KWCS7_exposure_profiles.ipynb   Full analysis: cleaning -> clustering -> stability -> models
+results/                        Derived aggregate results (all cluster-level; no individual records)
+  ├── bootstrap500_ari.csv          Bootstrap stability, k = 2-8, 500 replicates each
+  ├── gmm_covariance_comparison.csv Gaussian-mixture cross-check, 4 covariance structures
+  ├── lpa_profiles_k4.csv           Model-based 4-class profiles
+  ├── unadjusted_models.csv         Survey-weighted unadjusted odds ratios
+  ├── adjusted_models.csv           Covariate-adjusted models (age, sex, occupation, employment)
+  ├── adjusted_risk_diff.csv        Model-based average marginal risk differences
+  ├── effect_sizes_wald.csv         Cramer's V, eta-squared, design-adjusted Wald tests
+  ├── table1_profile_z.csv          Standardized item means by profile
+  ├── table2_validation.csv         Outcome prevalences, unweighted and survey-weighted
+  └── tableS_selection.csv          Cluster-number selection indices
+figures/                        Manuscript figures (PNG + PDF)
+tables/                         Manuscript tables (CSV)
+```
+
+Everything in `results/` and `tables/` is aggregated to the profile level (4–17 rows per file).
+No individual-level records are published in this repository.
+
+---
+
+## Methods notes worth knowing before reusing this code
+
+- **Clustering is unweighted; description is weighted.** Profiles are defined by the geometry
+  of the standardized exposure space, so survey weights are not used to form clusters. Weights
+  are reintroduced when reporting how prevalent each profile is in the working population.
+- **k = 4 was not chosen by any single index.** Because all 18 hazards are positively
+  intercorrelated, the silhouette and the Calinski–Harabasz index both favour the trivial
+  k = 2 intensity split, and the Davies–Bouldin index is non-monotonic. k = 4 was selected
+  from the inertia elbow together with compositional separability and bootstrap stability.
+  `results/tableS_selection.csv` has the full index table.
+- **Bootstrap stability is high at every k** (mean ARI 0.92–0.99). It is therefore evidence
+  that the chosen partition reproduces, *not* a criterion for choosing k.
+- **Gaussian mixtures do not recover the compositional class.** Under all four covariance
+  structures they grade along the intensity axis (ARI vs k-means 0.14–0.35) and never isolate
+  the interpersonal profile. This is reported rather than hidden — see
+  `results/gmm_covariance_comparison.csv`.
+- **Design-adjusted inference is approximate.** Primary-sampling-unit identifiers are not
+  released in the public-use file, so inference uses weight-normalized pseudo-maximum-likelihood
+  models with HC1 robust standard errors rather than a full survey design object.
+- **Odds ratios are on the survey-weighted scale** and reproduce from the weighted, not the
+  unweighted, prevalences.
+
+---
+
+## Licence
+
+Code and derived results: MIT (see `LICENSE`).
+The KWCS microdata is not covered by this licence and is not distributed here.
+
+## Funding
+
+This research was supported by the ANCHOR program through the Gyeongbuk ANCHOR Center, funded
+by the Ministry of Education (MOE) and Gyeongsangbuk-do, Republic of Korea (2026-ANCHOR-15-102).

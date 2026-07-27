@@ -1,0 +1,82 @@
+{
+ "A2": {
+  "cov_comparison": [
+   {
+    "covariance": "diag",
+    "BIC": -643159,
+    "ARI_vs_kmeans": 0.317,
+    "agreement": 0.591,
+    "rel_entropy": 0.999,
+    "mean_max_post": 0.999,
+    "shares %": "46.7/21.8/14.9/16.6"
+   },
+   {
+    "covariance": "full",
+    "BIC": -1020226,
+    "ARI_vs_kmeans": 0.138,
+    "agreement": 0.454,
+    "rel_entropy": 1.0,
+    "mean_max_post": 1.0,
+    "shares %": "55.5/18.2/7.6/18.8"
+   },
+   {
+    "covariance": "tied",
+    "BIC": 1761136,
+    "ARI_vs_kmeans": 0.138,
+    "agreement": 0.536,
+    "rel_entropy": 0.931,
+    "mean_max_post": 0.96,
+    "shares %": "53.2/35.2/8.6/3.1"
+   },
+   {
+    "covariance": "spherical",
+    "BIC": 1818827,
+    "ARI_vs_kmeans": 0.347,
+    "agreement": 0.401,
+    "rel_entropy": 0.957,
+    "mean_max_post": 0.976,
+    "shares %": "7.4/52.2/13.7/26.6"
+   }
+  ],
+  "bic_min_k_diag": 8
+ },
+ "A3": [
+  {
+   "outcome": "Presenteeism",
+   "n": 36274,
+   "CramerV": 0.101,
+   "CramerV_wtd": 0.097,
+   "wald_chi2": 317.1,
+   "wald_df": 3,
+   "wald_p": 1.942075558263286e-68
+  },
+  {
+   "outcome": "Sickness absence",
+   "n": 43078,
+   "CramerV": 0.05,
+   "CramerV_wtd": 0.063,
+   "wald_chi2": 163.7,
+   "wald_df": 3,
+   "wald_p": 2.8870273075397034e-35
+  },
+  {
+   "outcome": "Poor work-life balance",
+   "n": 43999,
+   "CramerV": 0.125,
+   "CramerV_wtd": 0.113,
+   "wald_chi2": 556.4,
+   "wald_df": 3,
+   "wald_p": 2.840285061873069e-120
+  },
+  {
+   "outcome": "Work engagement",
+   "n": 44100,
+   "CramerV": "eta2=0.0044",
+   "CramerV_wtd": "",
+   "wald_chi2": 172.2,
+   "wald_df": 3,
+   "wald_p": 4.272086206388473e-37
+  }
+ ],
+ "A4_note": "\uac00\uc911 \ub85c\uc9c0\uc2a4\ud2f1(wt2 \uc815\uaddc\ud654, HC1); \ubcf4\uc815: \uc5f0\ub839, \uc131, \uc9c1\uc5c5\ub300\ubd84\ub958(C), \uace0\uc6a9\ud615\ud0dc(C)"
+}

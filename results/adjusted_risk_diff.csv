@@ -1,0 +1,10 @@
+outcome,profile,adj_prev_%,adj_RD_pp,ref_prev_%
+Presenteeism,Interpersonal,6.9,3.0,3.9
+Presenteeism,Physical-env.,8.6,4.7,3.9
+Presenteeism,High-intensity,7.4,3.5,3.9
+Sickness absence,Interpersonal,4.3,0.8,3.5
+Sickness absence,Physical-env.,6.2,2.7,3.5
+Sickness absence,High-intensity,3.4,-0.1,3.5
+Poor work-life balance,Interpersonal,25.7,6.9,18.8
+Poor work-life balance,Physical-env.,23.8,5.0,18.8
+Poor work-life balance,High-intensity,28.9,10.1,18.8

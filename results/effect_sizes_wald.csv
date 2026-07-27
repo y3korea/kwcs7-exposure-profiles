@@ -1,0 +1,5 @@
+outcome,n,CramerV,CramerV_wtd,wald_chi2,wald_df,wald_p
+Presenteeism,36274,0.101,0.097,317.1,3,1.942075558263286e-68
+Sickness absence,43078,0.05,0.063,163.7,3,2.8870273075397034e-35
+Poor work-life balance,43999,0.125,0.113,556.4,3,2.840285061873069e-120
+Work engagement,44100,eta2=0.0044,,172.2,3,4.272086206388473e-37
