@@ -1,0 +1,5 @@
+covariance,ARI vs k-means,agreement,relative entropy,max PSY z,BIC (not comparable),min eigenvalue
+spherical,0.347,0.401,0.957,0.44,1818827,5.7e-02
+diag,0.317,0.591,0.999,0.23,-643159,1.0e-06
+tied,0.138,0.536,0.931,0.82,1761136,1.5e-01
+full,0.138,0.454,1.0,0.19,-1020226,1.0e-06

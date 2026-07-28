@@ -1,5 +1,5 @@
-Phenotype,n,Weighted %,Physical (z),Ergonomic (z),Psychosocial (z),Mean age,Female %,Top occupation
-Low-exposure,19924,46.0,-0.45,-0.35,-0.39,48.4,55.1,Clerks
-Interpersonal,10214,20.5,-0.35,0.32,0.71,49.1,63.8,Service
-Physical-env.,12034,28.2,0.62,0.16,-0.08,50.6,41.4,Clerks
-High-intensity,1953,5.2,2.58,0.86,0.79,50.7,31.5,Craft/Trades
+Profile,n,Weighted %,Physical (z),Ergonomic (z),Psychosocial (z),Mean age,Female %,Wage employees %,Most over-represented occupations (O/E)
+Low-exposure,19924,46.0,-0.45,-0.35,-0.39,48.4,55.1,65.1,Clerks 1.44; Professionals 1.27
+Interpersonal,10214,20.5,-0.35,0.32,0.71,49.1,63.8,57.1,Service 1.82; Sales 1.37
+Physical-env.,12034,28.2,0.62,0.16,-0.08,50.6,41.4,62.5,Craft/Trades 1.74; Agri/Fishery 1.70
+High-intensity,1953,5.2,2.58,0.86,0.79,50.7,31.5,68.8,Craft/Trades 2.96; Operators 1.99

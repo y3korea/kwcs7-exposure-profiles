@@ -1,0 +1,28 @@
+outcome,model,profile,aOR (95% CI),n
+Presenteeism,"A. main model (age, sex, occupation 10 groups, employment status)",Interpersonal,1.83 (1.57-2.14),36274
+Presenteeism,"A. main model (age, sex, occupation 10 groups, employment status)",Physical-env.,2.34 (2.03-2.70),36274
+Presenteeism,"A. main model (age, sex, occupation 10 groups, employment status)",High-intensity,1.98 (1.51-2.59),36274
+Presenteeism,B. occupation at 3 digits in place of 1 digit,Interpersonal,1.81 (1.54-2.12),36274
+Presenteeism,B. occupation at 3 digits in place of 1 digit,Physical-env.,2.38 (2.06-2.75),36274
+Presenteeism,B. occupation at 3 digits in place of 1 digit,High-intensity,1.96 (1.49-2.57),36274
+Presenteeism,C. B + industry + usual weekly hours,Interpersonal,1.74 (1.48-2.05),34406
+Presenteeism,C. B + industry + usual weekly hours,Physical-env.,2.19 (1.89-2.54),34406
+Presenteeism,C. B + industry + usual weekly hours,High-intensity,1.75 (1.33-2.31),34406
+Sickness absence,"A. main model (age, sex, occupation 10 groups, employment status)",Interpersonal,1.22 (1.03-1.45),43078
+Sickness absence,"A. main model (age, sex, occupation 10 groups, employment status)",Physical-env.,1.80 (1.56-2.08),43078
+Sickness absence,"A. main model (age, sex, occupation 10 groups, employment status)",High-intensity,0.97 (0.71-1.33),43078
+Sickness absence,B. occupation at 3 digits in place of 1 digit,Interpersonal,1.23 (1.04-1.46),43078
+Sickness absence,B. occupation at 3 digits in place of 1 digit,Physical-env.,1.77 (1.53-2.05),43078
+Sickness absence,B. occupation at 3 digits in place of 1 digit,High-intensity,0.91 (0.67-1.25),43078
+Sickness absence,C. B + industry + usual weekly hours,Interpersonal,1.23 (1.03-1.47),40884
+Sickness absence,C. B + industry + usual weekly hours,Physical-env.,1.74 (1.50-2.02),40884
+Sickness absence,C. B + industry + usual weekly hours,High-intensity,0.90 (0.65-1.23),40884
+Poor work-life balance,"A. main model (age, sex, occupation 10 groups, employment status)",Interpersonal,1.51 (1.40-1.64),43999
+Poor work-life balance,"A. main model (age, sex, occupation 10 groups, employment status)",Physical-env.,1.36 (1.26-1.47),43999
+Poor work-life balance,"A. main model (age, sex, occupation 10 groups, employment status)",High-intensity,1.79 (1.56-2.05),43999
+Poor work-life balance,B. occupation at 3 digits in place of 1 digit,Interpersonal,1.47 (1.35-1.59),43999
+Poor work-life balance,B. occupation at 3 digits in place of 1 digit,Physical-env.,1.38 (1.27-1.49),43999
+Poor work-life balance,B. occupation at 3 digits in place of 1 digit,High-intensity,1.80 (1.56-2.08),43999
+Poor work-life balance,C. B + industry + usual weekly hours,Interpersonal,1.42 (1.30-1.54),41638
+Poor work-life balance,C. B + industry + usual weekly hours,Physical-env.,1.30 (1.19-1.41),41638
+Poor work-life balance,C. B + industry + usual weekly hours,High-intensity,1.62 (1.39-1.88),41638

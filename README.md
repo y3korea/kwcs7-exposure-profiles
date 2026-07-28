@@ -12,7 +12,7 @@ Analysis code and derived results for the study:
 
 Occupational-health surveillance usually studies one hazard at a time, but workers meet
 hazards in bundles. Using the 7th Korean Working Conditions Survey (2023, N = 44,125
-working-age employees), we z-standardized **18 self-reported hazard-exposure items** across
+working-age respondents in employment — 62.7% wage employees, 30.2% self-employed, 7.1% unpaid family workers), we z-standardized **18 self-reported hazard-exposure items** across
 physical, ergonomic, and psychosocial domains and partitioned workers with **k-means
 clustering**. Four outcomes were deliberately **withheld** from clustering and only then
 compared across the resulting profiles.
@@ -31,6 +31,35 @@ exposure *intensity* (PC1, 36.5% of variance) **and** a physical-versus-interper
 *composition* axis (PC2, 12.6%). The Interpersonal/service profile reports low physical
 exposure and would be scored "low-risk" by any intensity-based screen, yet carries one of the
 highest presenteeism burdens — which is the finding with the most direct prevention relevance.
+
+---
+
+## What the notebook produces (revised 2026-07-28)
+
+Running the notebook top to bottom regenerates **every figure, table and reported statistic**
+in the article and its Supporting Information, including:
+
+| Cell | Output |
+|---|---|
+| 2c | Table SIII — the 18-item battery, response scale, distributions, Cronbach's α by domain |
+| 4c | Table SV — domain-mean profile of **every class under all four** GMM covariance structures |
+| 4d | Table SVI — Ward ARI across 8 subsamples; domain-balanced and domain-mean re-clustering; k = 5 |
+| 6b | Table III — unadjusted and adjusted models with the **survey sandwich** variance estimator |
+| 6c | Table SIV — presenteeism denominator diagnostics and the opposite-coding sensitivity analysis |
+| 6d | Table SVII — finer control for job structure (3-digit occupation, industry, weekly hours) |
+
+Two points a reader checking the code should know:
+
+- **Survey weights are not frequency weights.** Cell 6b builds the pseudo-maximum-likelihood
+  sandwich `B · Σ wᵢ²(yᵢ−p̂ᵢ)²xᵢxᵢ′ · B` explicitly. Passing the weights to `freq_weights=`
+  with `cov_type="HC1"` — the natural-looking shortcut — understates every standard error by
+  26–40% in these data. Earlier versions of this notebook did exactly that.
+- **The mixture BIC is not usable here.** With discrete 7-point inputs, the diagonal and
+  unconstrained components approach variance degeneracy (minimum eigenvalue pinned at
+  `reg_covar` = 1e-6), so the log-likelihood is a function of the regulariser. Cell 4c prints
+  the minimum eigenvalue alongside each BIC so this is visible rather than implicit.
+
+`B_BOOT = 500` in Cell 4b takes 30–90 minutes; set it to `0` to skip the bootstrap sweep.
 
 ---
 

@@ -1,0 +1,13 @@
+outcome,profile,all workers,n (all),wage employees only,n (wage)
+Presenteeism,Interpersonal,1.83 (1.57-2.14),36274,1.90 (1.55-2.33),22492
+Presenteeism,Physical-env.,2.34 (2.03-2.70),36274,2.22 (1.84-2.67),22492
+Presenteeism,High-intensity,1.98 (1.51-2.59),36274,2.12 (1.54-2.92),22492
+Sickness absence,Interpersonal,1.22 (1.03-1.45),43078,1.16 (0.94-1.44),27047
+Sickness absence,Physical-env.,1.80 (1.56-2.08),43078,1.75 (1.47-2.08),27047
+Sickness absence,High-intensity,0.97 (0.71-1.33),43078,1.01 (0.70-1.44),27047
+Poor work-life balance,Interpersonal,1.51 (1.40-1.64),43999,1.43 (1.29-1.59),27614
+Poor work-life balance,Physical-env.,1.36 (1.26-1.47),43999,1.33 (1.21-1.47),27614
+Poor work-life balance,High-intensity,1.79 (1.56-2.05),43999,1.80 (1.53-2.12),27614
+Work engagement,Interpersonal,-0.030 (-0.054 to -0.006),44100,-0.031 (-0.060 to -0.001),27665
+Work engagement,Physical-env.,-0.066 (-0.088 to -0.044),44100,-0.068 (-0.095 to -0.042),27665
+Work engagement,High-intensity,-0.204 (-0.250 to -0.158),44100,-0.212 (-0.266 to -0.158),27665
